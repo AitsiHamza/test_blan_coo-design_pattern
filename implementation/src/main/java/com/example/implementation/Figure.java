@@ -1,4 +1,6 @@
 package com.example.implementation;
 
-public class Figure implements Observer{
+public abstract class Figure implements Observer{
+    protected int level;
+    public abstract void dessiner();
 }

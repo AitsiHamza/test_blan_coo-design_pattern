@@ -20,7 +20,27 @@ public class ImplementationApplication {
 
         group2.add(new Rectangle(1,30,new Point(8.0,9.0)));
 
-        mainGroup.dessiner();
+        Dessin dessin=new Dessin();
+        dessin.ajouter(mainGroup);
+        /**another observer*/
+        Group mainGroup2 = new Group();
+        Group group3 = new Group();
+
+        mainGroup2.add(group3);
+        group3.add(new Cercle(20,new Point(41.0,15.0)));
+
+        Dessin dessin2=new Dessin();
+        dessin2.ajouter(mainGroup2);
+
+        Parametrage parametrage=new Parametrage();
+        parametrage.addObserver(dessin);
+        parametrage.addObserver(dessin2);
+
+        parametrage.setParams("red","orange",2.0);
+        parametrage.removeObserver(dessin);
+        parametrage.removeObserver(dessin2);
+        System.out.println("***************************************************");
+        parametrage.setParams("white","black",1.0);
     }
 
 }

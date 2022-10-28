@@ -9,6 +9,11 @@ public class Cercle extends Figure{
         this.point = point;
     }
 
+
+    @Override
+    public void afficher(String couleur_remplissage, String couleur_contour, Double epaisseur_contour) {
+        System.out.println("test cercle");
+    }
     @Override
     public void dessiner() {
         String tab="";

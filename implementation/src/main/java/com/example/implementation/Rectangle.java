@@ -17,4 +17,9 @@ public class Rectangle extends Figure{
         for (int i = 0; i < level; i++)tab+="\t";
         System.out.println(tab+point.toString()+"\tsurface : "+l*h+"\tperimetre : "+2*(l+h));
     }
+
+    @Override
+    public void afficher(String couleur_remplissage, String couleur_contour, Double epaisseur_contour) {
+        System.out.println("test rectangle");
+    }
 }
